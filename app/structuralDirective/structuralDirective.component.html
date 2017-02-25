@@ -1,0 +1,36 @@
+<div class='example-area'>
+    <label>
+        <input type="checkbox" [(ngModel)]="ifCondition" /> 
+        If directive condition
+    </label>
+    <div *ngIf="ifCondition">
+        ifCondition is equal true
+    </div>
+    <div *ngIf="!ifCondition">
+        ifCondition is equal false
+    </div>
+    <template [ngIf]="ifCondition">
+        <div>
+            ifCondition is equal true
+        </div>
+    </template>
+</div>
+
+<div class='example-area'>
+    <label>
+        <input type="checkbox" [(ngModel)]="condition1" (change)="refreshConditionsArray()" /> 
+        Condition 1
+    </label>
+    <label>
+        <input type="checkbox" [(ngModel)]="condition2" (change)="refreshConditionsArray()" /> 
+        Condition 2
+    </label>
+    <label>
+        <input type="checkbox" [(ngModel)]="condition3" (change)="refreshConditionsArray()" /> 
+        Condition 3
+    </label>
+
+    <div *myAny="conidtionsArray">
+        At least one condition is true!
+    </div>
+</div>

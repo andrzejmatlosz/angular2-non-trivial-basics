@@ -1,0 +1,7 @@
+<div>some content</div>
+<select>
+    <!--<option></option>-->
+    <option *ngFor="let item of items">
+        <template [ngTemplateOutlet]="innerTemplate" [ngOutletContext]="{item: item}"></template>
+    </option>
+</select>
