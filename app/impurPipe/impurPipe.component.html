@@ -9,7 +9,7 @@
         <button (click)="addTeamMember('Green')">Add green</button>
         <button (click)="addTeamMember('Blue')">Add blue</button>
     </div>
-    <div>
+    <div class="members-list">
         All team members:
         <div *ngFor="let teamMember of teamMembers">
             <span>{{teamMember.name}}</span>
@@ -17,7 +17,7 @@
             <span>{{teamMember.teamColor}}</span>
         </div>
     </div>
-    <div>
+    <div class="members-list">
         All green members:
         <div *ngFor="let teamMember of teamMembers | teamMembersFilter:'Green' ">
             <span>{{teamMember.name}}</span>
@@ -25,7 +25,7 @@
             <span>{{teamMember.teamColor}}</span>
         </div>
     </div>
-    <div>
+    <div class="members-list">
         All red members from Warszawa:
         <div *ngFor="let teamMember of teamMembers | teamMembersFilter:'Red':'Warszawa' ">
             <span>{{teamMember.name}}</span>
